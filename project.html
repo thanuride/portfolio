@@ -25,7 +25,7 @@
     <div class="Project-content">
         <div class="project-section">
             <div class="project-box">
-                <p>Project 01</p>
+                <p target="topic" >Project 01</p>
                 <div class="pro-image-box">
                     <img src="images/project01.png" alt="photo of myself">
                     <p>
@@ -37,7 +37,7 @@
                 </div>    
             </div>
             <div class="project-box">
-                <p>Project 02</p>
+                <p target="topic">Project 02</p>
                 <div class="pro-image-box">
                     <img src="images/project02.avif" alt="photo of myself">
                     <p>
@@ -52,7 +52,7 @@
         
         <div class="project-section">
             <div class="project-box">
-                <p>Project 03</p>
+                <p target="topic">Project 03</p>
                 <div class="pro-image-box">
 
                     <img src="images/project03.jpeg" alt="photo of myself" >
@@ -64,7 +64,7 @@
                 </div>    
             </div>
             <div class="project-box">
-                <p>Project 04</p>
+                <p target="topic">Project 04</p>
                 <div class="pro-image-box">
                     <img src="images/project04.webp" alt="photo of myself" >
                     <p>
@@ -77,6 +77,18 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll('.pro-image-box img');
+    
+            images.forEach((img, index) => {
+                setTimeout(() => {
+                    img.classList.add('visible'); 
+                }, index * 200); 
+            });
+        });
+    </script>
     
 
 

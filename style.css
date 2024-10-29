@@ -5,33 +5,33 @@ html, body {
 }  
 
 body{
-    background-image: url(images/backgroundImage.jpg);
+    background-image: url(images/background.JPG);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-
-/* navigation bar  */
+/* ------------------navigation bar------------------  */
 nav{
     overflow: hidden;
     font-weight: bold;
-    font-size: medium;
+    font-size: 18px;
 }
 nav ul{
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    
+    display: flex;  
+       
 }
 
 nav li{
     margin: 20px 45px;
     padding: 10px 20px; 
     border: 2px ;
-    background-color: rgb(255, 255, 255);
+    background-color: #c5ad9c;
+    transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 20px;
-    
+    box-shadow: 3px 3px 3px rgba(135, 128, 123, 0.81)
 }
 
 .style{
@@ -44,29 +44,36 @@ nav a{
     
 }
 
-nav li:hover{
-    background-color: #7c6d6d2b ;
+nav li:not(:last-child):hover{ /*negation & structural*/
+    background-color: rgb(54, 132, 177) ;
     cursor: pointer;
 }
 
-
-nav li:last-child{
-    margin-left: 42rem;
-    display: inline-block;
+nav li:not(:last-child):hover a{ /*negation & structural*/
+   color: #ffffff;
 }
 
 
-/* content inside the main page */
+nav li:last-child{  /*structural selector*/
+    margin-left: 40rem;
+    display: inline-block;
+}
 
+nav li:last-child:hover{
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+/* -----------content inside the main page----------- */
 .mainPhoto {
     position: relative;
-    left: 50%;
+    left: 43%;
 }
 
 .intro{
     position: absolute;
-    top: 25%;
-    left: 10%;
+    top: 26%;
+    left: 6%;
 }
 
 .word1{
@@ -79,32 +86,36 @@ nav li:last-child{
 }
 
 .button{
-    color: rgb(0, 0, 0);
+    color: rgb(247, 244, 244);
     position: absolute;
-    top: 48%;
-    left: 23%;
+    top: 54%;
+    left: 20%;
     text-decoration: none;
     font-weight: bold;
     font-size: 25px;
-    background-color: rgba(101, 100, 100, 0.136);
+    background-color: rgb(147, 147, 147);
     margin: 20px 45px;
     padding: 15px 25px; 
     border: 2px ;
     border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .button:hover{
     cursor: pointer;
-    background-color: rgba(159, 95, 95, 0.419);
+    background-color: rgba(165, 165, 165, 0.822);
 }
-.button a :hover{
-    color: aliceblue;
+
+.button::after{ 
+    content: " →";  
+  font-size: 1em;
+  color: inherit
 }
 
 .socialIcons{
     position: absolute;
-    top: 61%;
-    left: 21%;
+    top: 67%;
+    left: 18%;
 }
 
 .socialIcons a {
@@ -117,6 +128,7 @@ nav li:last-child{
     font-size: 2em;
     color: black;
     opacity: 0.9;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 
@@ -126,28 +138,46 @@ nav li:last-child{
 
 }
 
-.socialIcons a:last-child:hover i{
+.socialIcons a:last-child:hover i{ 
     color: rgba(177, 57, 57, 0.797);
     transition: 0.5s;
 }
 
-/* about page */
+/*------------------ about page ------------------*/
+ul{
+    list-style-type: none;
+}
+
+.box li{
+    margin-left: -30px;
+    font-size: 18px;
+
+}
 
 .content-box {
     display: flex;
     flex-direction: row;
-    border: 2px solid #333; 
+    border: 2px solid transparent; 
     padding: 20px;          
     margin-top: 5%;    
     margin-left: 50px;  
     width: 90%;
-    background-color: #f9f9f9; 
+    background: linear-gradient(90deg, rgba(76,104,147,1) 0%, rgba(112,151,182,1) 5%, rgba(255,255,255,1) 29%, rgba(255,255,255,1) 63%, rgba(140,164,181,1) 82%, rgba(69,115,149,0.8729866946778712) 100%);
     border-radius: 10px;    
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.657);
 }
 
-.name{
-    font-size: 40px;    
+[title~="myself"]{
+    margin-left: -70px;
+}
+
+[target="name"]{
+    font-size: 40px;  
+}
+
+h5:nth-child(1){
+    font-size: 20px;
+    margin-top: 9px;
 }
 
 .description{
@@ -157,21 +187,19 @@ nav li:last-child{
     margin-left: 20px;
 }
 
-.box{
-    
+.box{   
     width: 270px;
     padding: 10px;
     height: 300px;             
-    background-color: #a99e9e7a; 
+    background-color: #d2d2d2; 
     border-radius: 10px; 
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.657);
-
 }
 
 .container{
     display: flex ;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
     margin-left:10px;
 }
 
@@ -190,7 +218,7 @@ nav li:last-child{
 
 }
 
-/* project page */
+/* ------------------ project page ------------------ */
 
 header{
     font-size: 50px;
@@ -216,18 +244,25 @@ header{
 
 .project-box{
     border: 30px;
-    background-color: rgba(205, 205, 205, 0.261);
+    background-color: rgba(205, 205, 205, 0.842);
     border-radius: 20px;
     width: 600px;
-    height: 300px;
+    height: 280px;
     text-align: justify;
     padding: 20px;
     font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project-box:hover {
+    transform: scale(1.05);
+    cursor: pointer; 
 }
 
 .pro-image-box{
     display: flex;
     flex-direction: row;
+    margin-top: -20px;
 }
 
 .pro-image-box img{
@@ -237,10 +272,26 @@ header{
     margin-top: auto;
     margin-bottom: auto;
     border-radius: 0px;
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
 }
 
+.pro-image-box img.visible {
+    opacity: 1; 
+    transform: translateY(0); 
+}
 
-/* contact page */
+[target="topic"]{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight:bolder;
+    margin-top: 5px;
+    text-align: center;
+    -webkit-text-stroke: 1px #0059f351;
+}
+
+/* ------------------contact page------------------ */
 .contact-content p{
     text-align: center;
     font-size: 20px;
@@ -271,9 +322,8 @@ header{
     width: 400px;
     border-radius: 10px;
     padding: 30px;
-    margin-left: 150px;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto 0 auto 0;
+    margin-left: 200px;
 
 }
 
@@ -294,6 +344,7 @@ header{
     padding-right: 15px;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .send-btn:hover{
@@ -316,6 +367,13 @@ header{
 .semiheading{
     font-size: 30px;
 }
+
+#email:valid{
+    border: 2px solid green;
+}
+
+
+
 
 
 
