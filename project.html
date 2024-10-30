@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Luckiest+Guy&display=swap" rel="stylesheet">
     <title>Project Page</title>
 </head>
 <body>
 
     <!-- navigation bar -->
-    <div>
+    <div class="nav-bar">
         <nav>
             <ul>
                 <li><a href="mainPage.html" class="style">Home</a></li>
@@ -19,6 +22,9 @@
             </ul>
         </nav>
     </div>   
+
+
+    <!-- -------------project content-------------- -->
 
     <header>MY WORK</header>
 
@@ -34,7 +40,8 @@
                         select preferred seats, and confirm bookings, providing a streamlined experience for both 
                         customers and airlines by automating the reservation process and reducing booking conflicts.
                     </p>
-                </div>    
+                </div> 
+                <time datetime="2024-02-10">Published on  2024</time>      
             </div>
             <div class="project-box">
                 <p target="topic">Project 02</p>
@@ -46,7 +53,8 @@
                         automatically calculating averages and generating performance summaries, making it easier to 
                         manage and analyze academic records for both students and teachers.
                     </p>
-                </div>    
+                </div> 
+                <time datetime="2024-02-10">Published on 2024</time>      
             </div>
         </div>
         
@@ -61,34 +69,67 @@
                         experience, the game challenges players to make strategic moves, enhancing logical 
                         thinking and providing engaging gameplay with real-time feedback.
                     </p>
-                </div>    
+                </div> 
+                <time datetime="2024-02-10">Published on 2024</time>   
             </div>
             <div class="project-box">
                 <p target="topic">Project 04</p>
                 <div class="pro-image-box">
                     <img src="images/project04.webp" alt="photo of myself" >
                     <p>
-                        The "Marinelife" web page, created using JavaScript, HTML, and CSS, showcases an engaging 
-                        and informative look at marine ecosystems. Designed for the Web Design and Development module,
-                        it offers interactive elements, vibrant visuals, and easy navigation, providing users
-                        with an immersive experience to explore diverse marine species and habitats.
+                        The "Marinelife" web page, developed with JavaScript, HTML, and CSS, 
+                        offers an engaging look at marine ecosystems. Designed for the Web Design and 
+                        Development module, it features interactive elements and vibrant visuals, providing 
+                        users with an immersive experience to explore various marine species and habitats.
                     </p> 
-                </div>    
+                </div>  
+                <time datetime="2024-02-10">Published on 2024</time>     
             </div>
-        </div>
+        </div
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const images = document.querySelectorAll('.pro-image-box img');
+    <!-- --------------------- footer ----------------- -->
+    <footer>
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="mainPage.html">Home</a></li>
+                    <li><a href="aboutPage.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contacts</a></li>
+                    
+                </ul>
+            </div>
     
-            images.forEach((img, index) => {
-                setTimeout(() => {
-                    img.classList.add('visible'); 
-                }, index * 200); 
-            });
-        });
-    </script>
+            
+            <div class="footer-section">
+                <h3>Socials</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+    
+           
+            <div class="footer-section ">
+                <h3>About Me</h3>
+                <p>
+                    I'm a passionate web developer with a love for creating interactive and responsive websites.
+                    Always eager to learn new things and improve my skills.
+                </p>
+            </div>
+        </div>
+    
+    
+        <div class="footer-bottom">
+            <p><span target="footB">Address:</span target="footB" > Dehiwala, Srilanka | <span target="footB" >Phone:</span> +9476-5609503 |<span target="footB" > Email:</span> <a href="mailto:tsenara14@gmail.com">tsenara14@gmail.com</a></p>
+            <p>&copy; 2024 Thanuri De Silva. All Rights Reserved.</p>
+        </div>
+    </footer>
     
 
 
