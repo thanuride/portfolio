@@ -214,12 +214,11 @@ h5::before {
 }
 
 /*  ==================== project page  ==================== */
-header{
+.project-heading{
     font-size: 50px;
-    font-weight: bolder;
+    font-weight: 700;
     text-align: center;
     padding-bottom: 30px;
-    font-weight: 400;
     font-style: normal;
 }
 .project-content{
@@ -242,7 +241,6 @@ header{
     width: 550px;
     height: auto;
     text-align: justify;
-    word-break: break-all;
     padding: 20px;
     font-size: 20px;
     transition: transform 0.3s ease;
@@ -278,7 +276,7 @@ header{
     text-align: center;
     font-style: normal;
 }
-header, [target="topic"]{
+project-heading, [target="topic"]{
     font-family: "Aclonica", sans-serif;
 }
 /*  ==================== contact page ==================== */
@@ -542,7 +540,6 @@ footer {
     }
     .description {
         font-size: 20px;
-        word-break: break-all;
     }
     .box {
         width: 80%;
