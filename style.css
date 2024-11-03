@@ -164,7 +164,7 @@ ul{
         transform: translateY(0); /* End position */
     }
 }
-[class="name"]{
+.name{
     font-size: 40px;  
     font-family: "Notable", sans-serif;
     font-weight: 400;
@@ -271,7 +271,7 @@ h5::before {
 .pro-image-box img:nth-child(1) { /*nth psudo*/
     border-radius: 10px;
 }
-[class="topic"]{
+.topic{
     font-size: 30px;
     text-transform: uppercase;
     font-weight:bolder;
@@ -279,7 +279,7 @@ h5::before {
     text-align: center;
     font-style: normal;
 }
-project-heading, [class="topic"]{
+.project-heading, .topic{
     font-family: "Aclonica", sans-serif;
 }
 /*  ==================== contact page ==================== */
@@ -352,16 +352,16 @@ project-heading, [class="topic"]{
 .semiheading{
     font-size: 30px;
 }
-#email:valid{ /*validity*/
+[name="email"]:valid{ /*validity & attribute*/ 
     border: 2px solid rgb(0, 128, 0);
 }
-#email:invalid{ /*validity*/
+[name="email"]:invalid{ /*validity & attribute*/
     border:1px solid rgb(247, 31, 31);
 }
-#name:valid{
+[name="name"]:valid{ /*validity & attribute*/
     border: 2px solid rgb(0, 128, 0);
 }
-#name:invalid{ /*validity*/
+[name="name"]:invalid{ /*validity & attribute*/
     border:1px solid rgb(247, 31, 31);
 }
 
