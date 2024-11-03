@@ -13,7 +13,6 @@ body{
 p{
     font-family: 'Times New Roman', Times, serif;
 }
-
 /* ==================== navigation bar ==================== */
 nav{
     overflow: hidden;
@@ -50,7 +49,7 @@ nav li:not(:last-child):hover a{ /*negation & structural*/
    color: rgb(255, 255, 255);
 }
 nav li:last-child{  /*structural selector*/
-    margin-left: 40rem;
+    margin-left: auto;
     display: inline-block;
 }
 nav li:last-child:hover{ /*structural*/
@@ -59,15 +58,21 @@ nav li:last-child:hover{ /*structural*/
 }
 
 /*  ==================== Main page  ====================*/
-
 .mainPhoto {
-    position: relative;
-    left: 43%;
+    width: 45vw; /* Using vw for responsive sizing */
+    height: auto; /* Keeps aspect ratio */
+    max-width: 600px; /* Caps the maximum size */
 }
-.intro{
-    position: absolute;
-    top: 26%;
-    left: 6%;
+.main-page-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.main-page-box div:nth-child(1){ /* pseudo */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
 }
 .intro h1:nth-child(1) {
     font-size: 80px; /* pseudo */
@@ -78,15 +83,12 @@ nav li:last-child:hover{ /*structural*/
     margin-top: 0;
 }
 .intro  span{
-    background-image: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient colors */
-    -webkit-background-clip : text; /* Clip background to text */
-    -webkit-text-fill-color: transparent; /* Make the text color transparent */
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b); 
+    -webkit-background-clip : text; 
+    -webkit-text-fill-color: transparent; 
 }
 .button{
     color: rgb(247, 244, 244);
-    position: absolute;
-    top: 54%;
-    left: 20%;
     text-decoration: none;
     font-weight: bold;
     font-size: 25px;
@@ -107,16 +109,13 @@ nav li:last-child:hover{ /*structural*/
     color: inherit
 }
 .socialIcons{
-    position: absolute;
-    top: 67%;
-    left: 18%;
+    padding-top: 20px;
 }
 .socialIcons a {
     text-decoration: none;
     padding: 10px;
     margin: 10px;
 }
-
 .socialIcons a i {
     font-size: 2em;
     color: rgb(0, 0, 0);
@@ -238,7 +237,8 @@ h5::before {
     border: 30px solid transparent;
     background: linear-gradient(90deg, rgba(76,104,147,1) 0%, rgba(112,151,182,1) 5%, rgba(255,255,255,1) 29%, rgba(255,255,255,1) 63%, rgba(140,164,181,1) 82%, rgba(69,115,149,0.8729866946778712) 100%);
     border-radius: 10px 55px 20px;
-    width: 550px;
+    margin-right: 40px ;
+    width: auto;
     height: auto;
     text-align: justify;
     padding: 20px;
@@ -474,14 +474,7 @@ footer {
         padding: 6px 10px;
     }
     nav li:last-child{  /*structural selector*/
-        margin-left: 0;
-        margin-right: 30px;
-        display: inline-block;
-    }    
-}
-@media (max-width: 1270px) {
-    nav li:last-child{  /*structural selector*/
-        margin-left: 0;
+        margin-left: auto;
         display: inline-block;
     }    
 }
@@ -512,24 +505,6 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
-    .contact-content h2 {
-        font-size: 24px;
-    }
-    .contact-content p,
-    .contact-message,
-    .contactInfo {
-        font-size: 16px;
-        padding: 15px;
-        margin: auto;
-    }
-    .send-btn {
-        font-size: 16px;
-        padding: 6px 12px;
-        width: 100%;
-    }
-}
-
 /* About Page Adjustments */
 @media (max-width: 1250px), (max-width: 900px) {
     .content-box {
@@ -548,30 +523,15 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
-    [target="name"] {
-        font-size: 30px;
-    }
-    h5:nth-child(1),
-    .box li {
-        font-size: 16px;
-    }
-    .description {
-        font-size: 16px;
-    }
-    .box {
-        padding: 10px;
-    }
-}
-
 /* Project Page Adjustments */
 @media (max-width: 1024px) {
     header {
         font-size: 40px;
     }
     .project-box {
-        width: 80%;
+        width: auto;
         font-size: 18px;
+        margin-right: 40px;
     }
     .pro-image-box img {
         height: 180px;
@@ -582,43 +542,50 @@ footer {
         align-items: center;
     }
 }
-
-@media (max-width: 768px) {
-    .project-box {
-        width: 90%;
-        padding: 15px;
+/* Responsive styling */
+@media (max-width: 1024px) {
+    .intro h1:nth-child(1) {
+        font-size: 60px;
     }
-    .pro-image-box img {
-        height: 150px;
-        width: 150px;
+    .intro h1:nth-child(2) {
+        font-size: 30px;
     }
-    [target="topic"] {
-        font-size: 25px;
+    .mainPhoto {
+        width: 40vw;
+        max-width: 500px;
     }
 }
 
-@media (max-width: 480px) {
-    header {
-        padding-top: 5px;
-        font-size: 30px;
-    }
-    .project-box {
-        width: 95%;
-        font-size: 16px;
-        padding: 10px;
-    }
-    .pro-image-box {
+@media (max-width: 768px) {
+    .main-page-box {
         flex-direction: column;
         align-items: center;
     }
-    .pro-image-box img {
-        height: 120px;
-        width: 120px;
+    .intro h1:nth-child(1) {
+        font-size: 50px;
     }
-    [target="topic"] {
-        font-size: 20px;
+    .intro h1:nth-child(2) {
+        font-size: 25px;
+    }
+    .socialIcons a i {
+        font-size: 1.5em;
+    }
+    .mainPhoto {
+        width: 50vw;
+        max-width: 400px;
     }
 }
+@media (max-width: 480px) {
+    .mainPhoto {
+        width: 60vw;
+        max-width: 300px;
+    }
+}
+
+
+    
+
+
 
 
 
